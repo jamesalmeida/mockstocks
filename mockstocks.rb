@@ -40,7 +40,7 @@ post '/login' do
 		redirect "/"
 	else
 		flash[:alert] = "There was a problem with your login."
-		redirect '/register'
+		redirect '/registration'
 	end
 end
 
