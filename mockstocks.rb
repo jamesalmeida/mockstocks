@@ -27,3 +27,42 @@ end
 get '/' do
 	haml :index
 end
+
+get '/login' do
+	haml :login
+end
+
+post '/login' do
+	@user = User.authenticate(params['user']['username'], params['user']['password'])
+	if @user
+		session[:user_id] = @user.id
+		flash[:notice] = "Welcome back!"
+		redirect "/"
+	else
+		flash[:alert] = "There was a problem with your login."
+		redirect '/register'
+	end
+end
+
+get '/registration' do
+	haml :registration
+end
+
+post '/register' do
+	@user = User.new(params['user'])
+	if @user.save
+		session[:user_id] = @user.id
+		flash[:notice] = "Welcome to MockStocks!"
+		redirect '/'
+	else
+		flash[:alert] = "There was a problem with your registration."
+		redirect '/register'
+	end
+end
+
+get '/logout' do
+	session[:user_id] = nil
+	flash[:notice] = "Come back soon!"
+	redirect '/'
+end
+

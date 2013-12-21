@@ -1,0 +1,12 @@
+!!!
+
+%html
+	%head
+		%title MockStocks | Play. Trade. Win
+		%link{rel: "stylesheet", href: "/stylesheet.css", type: "text/css"}
+	%body
+		-if flash[:notice]
+			=flash[:notice]
+		-if flash[:alert]
+			=flash[:alert]
+		=yield
