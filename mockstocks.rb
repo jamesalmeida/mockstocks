@@ -48,7 +48,7 @@ get '/registration' do
 	haml :registration
 end
 
-post '/register' do
+post '/registration' do
 	@user = User.new(params['user'])
 	if @user.save
 		session[:user_id] = @user.id
@@ -56,7 +56,7 @@ post '/register' do
 		redirect '/'
 	else
 		flash[:alert] = "There was a problem with your registration."
-		redirect '/register'
+		redirect '/registration'
 	end
 end
 
@@ -64,5 +64,11 @@ get '/logout' do
 	session[:user_id] = nil
 	flash[:notice] = "Come back soon!"
 	redirect '/'
+end
+
+get 'dashboard/:id' do
+	@user = User.find(params[:id])
+	@portfolio = @user.portfolios.find(:all)
+	haml :dashboard
 end
 
