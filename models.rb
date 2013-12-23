@@ -14,7 +14,11 @@ class User < ActiveRecord::Base
 
 	attr_accessor :password
 
-	before_save :encrypt_password
+	before_save :encrypt_password, :add_balance
+
+	def add_balance
+		self.balance = 10000
+	end
 
 	def encrypt_password
 		if self.password.present?

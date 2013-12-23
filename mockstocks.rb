@@ -25,7 +25,11 @@ helpers do
 end
 
 get '/' do
-	haml :index
+	if current_user
+		redirect "/dashboard/#{current_user.id}"
+	else
+		haml :index
+	end
 end
 
 get '/login' do
@@ -66,9 +70,12 @@ get '/logout' do
 	redirect '/'
 end
 
-get 'dashboard/:id' do
+get '/dashboard/:id' do
 	@user = User.find(params[:id])
 	@portfolio = @user.portfolios.find(:all)
 	haml :dashboard
 end
 
+get '/transactions' do
+	haml :transactions
+end

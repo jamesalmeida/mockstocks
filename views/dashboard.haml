@@ -1,4 +1,13 @@
--if @user
-	=@user.username + "'s"
-	Dashboard
+%h3
+	-if @user
+		=@user.username + "'s"
+		Dashboard
+-if @user.balance === nil
+	You have no balance at this time.  Click here to
+	%a{href:'mailto:support@mockstocks.com'} contact customer support.
+-else
+	Balance = $
+	=@user.balance
+
+
 	
