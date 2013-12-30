@@ -50,6 +50,7 @@ GEM
       atomic
     tilt (1.4.1)
     tzinfo (0.3.38)
+    yahoo_stock (1.0.2)
 
 PLATFORMS
   ruby
@@ -65,3 +66,4 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sqlite3
+  yahoo_stock
