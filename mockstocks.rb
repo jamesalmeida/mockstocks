@@ -5,6 +5,7 @@ require 'rake'
 require 'chronic'
 require 'bcrypt'
 require 'rack-flash'
+require 'stock_quote'
 
 configure(:development) { set :database, 'sqlite3:///mockstocks_db.sqlite3'}
 
@@ -82,4 +83,8 @@ end
 
 post '/transactions' do
 	@transaction = Transaction.new(params['transaction'])
+	#quote = YahooStock::Quote.new(:stock_symbols => (@transaction.symbol))
+	#@transaction.price = quote.results(:to_hash).output[0][:last_trade_price_only]
+	@transaction.created_at = Time.now
+	redirect '/transactions'
 end

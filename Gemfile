@@ -10,7 +10,7 @@ gem 'rake'
 gem 'chronic'
 gem 'rack-flash3', :git => "git://github.com/treeder/rack-flash.git"
 gem 'bcrypt-ruby'
-gem 'yahoo_stock'
+gem 'stock_quote'
 
 
 group :development do |variable|
