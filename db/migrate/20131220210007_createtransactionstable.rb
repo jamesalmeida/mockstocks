@@ -3,7 +3,7 @@ class Createtransactionstable < ActiveRecord::Migration
   	create_table :transactions do |n|
   		n.integer :portfolio_id
   		n.string :symbol
-  		n.integer :type
+  		n.integer :transaction_type
   		n.integer :price
   		n.integer :shares
   		n.timestamp :created_at

@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20131220210007) do
   create_table "transactions", force: true do |t|
     t.integer  "portfolio_id"
     t.string   "symbol"
-    t.integer  "type"
+    t.integer  "transaction_type"
     t.integer  "price"
     t.integer  "shares"
     t.datetime "created_at"

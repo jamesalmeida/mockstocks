@@ -3,5 +3,19 @@
 		=@user.username + "'s"
 		Transactions
 
-TRANSACTION CODE GOES HERE
+%form{action: '/transactions', method: 'POST'}
+	%ul
+		%li
+			%label{for: 'symbol'} Stock Symbol
+			%input{type: 'text', name: '[transaction]symbol'}
+		%li
+			%label{for: 'shares'} Number of Shares
+			%input{type: 'text', name: '[transaction]shares'}
+		%li
+			%input{type: 'radio', name: '[transaction]type', value: '1'} Buy
+			%input{type: 'radio', name: '[transaction]type', value: '2'} Sell
+	%input{type: 'submit', value: 'Complete Transaction'}
+
+
+
 

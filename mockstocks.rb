@@ -79,3 +79,7 @@ end
 get '/transactions' do
 	haml :transactions
 end
+
+post '/transactions' do
+	@transaction = Transaction.new(params['transaction'])
+end
