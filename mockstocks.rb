@@ -85,6 +85,8 @@ post '/transactions' do
 	@transaction = Transaction.new(params['transaction'])
 	#quote = YahooStock::Quote.new(:stock_symbols => (@transaction.symbol))
 	#@transaction.price = quote.results(:to_hash).output[0][:last_trade_price_only]
+	quote = StockQuote::Stock.quote(@transaction.symbol)
+	@transaction.price = quote.ask
 	@transaction.created_at = Time.now
 	redirect '/transactions'
 end
