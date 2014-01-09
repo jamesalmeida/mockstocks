@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/jamesalmeida/stock_quote_patched.git
+  revision: 3309b3dd91bdbb044a490d15d192d674facf57af
+  specs:
+    stock_quote (1.1.2)
+      json
+      rest-client
+
+GIT
   remote: git://github.com/treeder/rack-flash.git
   revision: 20e393cdce030f35422dba545a1fed91ed398b29
   specs:
@@ -50,9 +58,6 @@ GEM
       activerecord (>= 3.0)
       sinatra (~> 1.0)
     sqlite3 (1.3.8)
-    stock_quote (1.1.2)
-      json
-      rest-client
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
@@ -72,4 +77,4 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sqlite3
-  stock_quote
+  stock_quote!
