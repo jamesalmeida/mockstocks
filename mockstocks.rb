@@ -83,18 +83,10 @@ end
 
 post '/transactions' do
 	@transaction = Transaction.new(params['transaction'])
-	puts @transaction.symbol
-	puts @transaction.symbol.class
 	stock_info = StockQuote::Stock.quote(@transaction.symbol)
 	@transaction.price = stock_info.ask
 	@transaction.created_at = Time.now
-	redirect '/transaction-confirmation'
-end
-
-get '/transaction-confirmation' do
-	haml :'transaction-confirmation'
-end
-
-post '/transaction-confirmation' do
-	haml :dashboard
+	# @transaction.save
+	# redirect '/dashboard/#{current_user.id}'
+	redirect '/transactions'
 end

@@ -3,6 +3,18 @@
 		=@user.username + "'s"
 		Transactions
 
+%h4 Type a stock symbol below to see it's current price:
+%form{action: '/transactions', method: 'POST'}
+	%ul
+		%li
+			%label{for: 'symbol'} Stock Symbol
+			%input{type: 'text', name: '[transaction]symbol'}
+		%li
+			%label{for: 'shares'} Number of Shares
+			%input{type: 'text', name: '[transaction]shares'}
+	%input{type: 'submit', value: 'Get Price'}
+
+%h4 Enter stock info below to buy or sell:
 %form{action: '/transactions', method: 'POST'}
 	%ul.pretty_form
 		%li
