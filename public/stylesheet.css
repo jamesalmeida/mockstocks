@@ -11,11 +11,11 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	color: #eee;
 }
 
 p {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5em;
 }
 
@@ -27,18 +27,19 @@ h1 {
 	letter-spacing: 1px;
 }
 
-h2 {
-	font-family: "Georgia", serif;
-	font-size: 18px;
-	font-style: italic;
-	font-weight: normal;
-	padding-bottom: 30px;
-	color: #ccc;
+h1.special {
+	font-size: 50px;
+	line-height: 55px;
+	padding-top: 40px;
 }
 
-h3 {
-	color: #999;
-	font-size: 18px;
+h2 {
+	color: #eee;
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 5px;
+	padding-bottom: 10px;
 }
 
 
@@ -91,7 +92,6 @@ h3 {
 	width: 90%;
 	margin: 0 auto;
 	position:relative;
-	top:10px;
 }
 
 .clearfix:after {
@@ -194,8 +194,7 @@ button {
 	line-height:24px;
 	cursor:pointer;
 	padding: 12px 25px 35px 25px;
-	margin: 15px 0 0 0;
-
+	margin: 20px 0 0 0;
 }
 
 

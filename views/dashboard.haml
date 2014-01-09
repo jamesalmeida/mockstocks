@@ -6,8 +6,69 @@
 	You have no balance at this time.  Click here to
 	%a{href:'mailto:support@mockstocks.com'} contact customer support.
 -else
-	Balance = $
-	=@user.balance
+	%h2
+		Balance = $
+		=@user.balance
 
-
-	
+.clearfix
+%br
+.left_column
+	.ticker_symbol
+		tsla
+	.sub_text
+		$25.40 x 55
+.right_column
+	.current_price
+		$151.28
+	.p_and_l_green
+		$123.82 (459.00%)
+.clearfix
+%hr.chart_line
+.left_column
+	.ticker_symbol
+		appl
+	.sub_text
+		$543.46 x 241
+.right_column
+	.current_price
+		$512.12
+	.p_and_l_red
+		$12.99 (1.2%)
+.clearfix
+%hr.chart_line
+.left_column
+	.ticker_symbol
+		zip
+	.sub_text
+		$543.46 x 241
+.right_column
+	.current_price
+		$512.12
+	.p_and_l_red
+		$112.99 (1.2%)
+.clearfix
+%hr.chart_line
+.left_column
+	.ticker_symbol
+		nflx
+	.sub_text
+		$543.46 x 241
+.right_column
+	.current_price
+		$512.12
+	.p_and_l_green
+		$2.11 (99.2%)
+.clearfix
+%hr.chart_line
+.left_column
+	.ticker_symbol
+		goog
+	.sub_text
+		$543.46 x 241
+.right_column
+	.current_price
+		$512.12
+	.p_and_l_green
+		$2.11 (99.2%)
+.clearfix
+%hr.chart_line
