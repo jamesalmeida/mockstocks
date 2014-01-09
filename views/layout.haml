@@ -2,14 +2,15 @@
 
 %html
 	%head
-		%title MockStocks | Play. Trade. Win
-		%link{rel: "stylesheet", href: "/stylesheet.css", type: "text/css"}
-		%link{href: '/images/favicon.ico', rel: 'shortcut icon', type: 'image/ico' }/
+		%title MockStocks | Play. Trade. Win.
+		%link{rel: 'stylesheet', href: '/stylesheet.css', type: 'text/css'}
+		%link{href: '/images/favicon.ico', rel: 'shortcut icon', type: 'image/ico'}
 	%body
-		-if flash[:notice]
-			=flash[:notice]
-		-if flash[:alert]
-			=flash[:alert]
+		#flash_message
+			-if flash[:notice]
+				=flash[:notice]
+			-if flash[:alert]
+				=flash[:alert]
 		#nav_wrapper
 			#logo
 				%ul
