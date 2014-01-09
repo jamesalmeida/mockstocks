@@ -1,0 +1,210 @@
+body {
+	background-color: #31344b;
+	font-family: "Source Sans Pro", "Arial", sans-serif;
+	color: #888ba3;
+}
+
+a {
+	color: #bec3e2;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+h1 {
+	color: #21d2cc;
+	font-size: 30px;
+	font-weight: 200;
+	padding: 0;
+	letter-spacing: 1px;
+}
+
+h2 {
+	font-family: "Georgia", serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+	padding-bottom: 30px;
+	color: #ccc;
+}
+
+h3 {
+	color: #999;
+	font-size: 18px;
+}
+
+
+/*NAVIGATION BEGINS*/
+#nav_wrapper {
+	width:90%;
+	margin:0 auto;
+}
+
+#logo {
+	float: left;
+	padding-top:15px;
+}
+
+#logo ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#logo ul li {
+	display: inline;
+}
+
+#logo ul li img {
+	display: inline;
+	width: 100px;
+}
+
+#nav {
+	float: right;
+	padding-top: 15px;
+}
+
+#nav ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav ul li {
+	display: inline;
+	font-size: 12px;
+	margin-left: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+/*NAVIGATION ENDS*/
+
+
+#wrapper {
+	width: 90%;
+	margin: 0 auto;
+	position:relative;
+	top:10px;
+}
+
+.clearfix:after {
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	line-height:0;
+	height:0;
+}
+
+
+/*DASHBOARD STUFF STARTS*/
+
+.left_column {
+	text-align: left;
+	width: 50%;
+	float: left;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.right_column {
+	text-align: right;
+	width: 50%;
+	float: right;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.ticker_symbol {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #bec3e2;
+}
+
+.current_price {
+	font-size: 18px;
+}
+
+.sub_text {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.p_and_l_red {
+	font-size: 12px;
+	margin-top: 5px;
+	color: #ef5765;
+}
+
+.p_and_l_green {
+	font-size: 12px;
+	margin-top: 5px;
+	color: #84c64a;
+}
+
+.chart_line {
+	border: 0;
+	height: 0;
+	border-top: 1px solid #3e4158;
+	margin: 20px 0;
+}
+/*DASHBOARD ENDS*/
+
+
+
+/*INPUT STUFF*/
+input[type="text"] {
+	display:block;
+	width:300px;
+	height:30px;
+	border:1px #bbb solid;
+	margin-top:5px;
+	margin-bottom:20px;
+	font-family: "Source Sans Pro", "Arial", sans-serif;
+	background-color: #ddd;
+	font-size: 15px;
+	color: #333;
+}
+
+input[type="password"] {
+	display:block;
+	width:300px;
+	height:30px;
+	border:1px #bbb solid;
+	margin-top:5px;
+	margin-bottom:20px;
+}
+
+button {
+	background-color:#2b2e44;
+	height:30px;
+	border:1px #494c67 solid;
+	font-size: 18px;
+	color: #ddd;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height:24px;
+	cursor:pointer;
+	padding: 12px 25px 35px 25px;
+	margin: 15px 0 0 0;
+
+}
+
+
+/*NAVIGATION BEGINS*/
+
+
+ul.pretty_form {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+/*NAVIGATION ENDS*/

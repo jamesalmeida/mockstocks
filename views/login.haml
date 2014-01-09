@@ -1,9 +1,9 @@
-%form{action: '/login', method: 'POST'}
-	%ul
+%form{action: '/login', method: 'POST'}	
+	%ul.pretty_form
 		%li
 			%label{for: 'username'} Username
 			%input{type: 'text', name: '[user]username'}
 		%li
 			%label{for: 'password'} Password
-			%input{type: 'password',name: '[user]password'}
-		%input{type: 'submit', value: 'Login'}
+			%input{type: 'password',name: '[user]password'}	
+	%button{type: 'submit', value: 'Login'} Login

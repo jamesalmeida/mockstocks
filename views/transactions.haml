@@ -1,10 +1,10 @@
-%h3
+%h1
 	-if @user
 		=@user.username + "'s"
 		Transactions
 
 %form{action: '/transactions', method: 'POST'}
-	%ul
+	%ul.pretty_form
 		%li
 			%label{for: 'symbol'} Stock Symbol
 			%input{type: 'text', name: '[transaction]symbol'}
@@ -14,8 +14,4 @@
 		%li
 			%input{type: 'radio', name: '[transaction]transaction_type', value: '1'} Buy
 			%input{type: 'radio', name: '[transaction]transaction_type', value: '2'} Sell
-	%input{type: 'submit', value: 'Complete Transaction'}
-
-
-
-
+	%button{type: 'submit', value: 'Complete Transaction'} Complete Transaction

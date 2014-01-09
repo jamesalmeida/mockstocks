@@ -10,21 +10,28 @@
 			=flash[:notice]
 		-if flash[:alert]
 			=flash[:alert]
-		%ul
-			-if current_user
-				%li
-					%a{href: "/dashboard/#{current_user.id}"} Dashboard
-				%li
-					%a{href: '/transactions'} Buy or Sell
-				%li
-					%a{href: '/logout'} Logout
-			-else
-				%li
-					%a{href: '/'} Home
-				%li
-					%a{href: '/login'} Login
-				%li
-					%a{href: '/registration'} Register
-		%h1 MockStocks
-		%h2 Play.  Trade.  Win.
-		=yield
+		#nav_wrapper
+			#logo
+				%ul
+					%li
+						%a{href:'/'}
+							%img{src:'/images/logo.png'}
+			#nav
+				%ul
+					-if current_user
+						%li
+							%a{href: "/dashboard/#{current_user.id}"} Dashboard
+						%li
+							%a{href: '/transactions'} Buy or Sell
+						%li
+							%a{href: '/logout'} Logout
+					-else
+						%li
+							%a{href: '/'} Home
+						%li
+							%a{href: '/login'} Login
+						%li
+							%a{href: '/registration'} Register
+		.clearfix
+		#wrapper
+			=yield

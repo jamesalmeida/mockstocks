@@ -1,5 +1,5 @@
 %form{action: '/registration', method: 'POST'}
-	%ul
+	%ul.pretty_form
 		%li
 			%label{for: 'fname'} First Name
 			%input{type: 'text', name: '[user]fname'}
@@ -15,4 +15,4 @@
 		%li
 			%label{for: 'password'} Password
 			%input{type: 'password', name: '[user]password'}
-	%input{type: 'submit', value: 'Register'}
+	%button{type: 'submit', value: 'Register'} Register
